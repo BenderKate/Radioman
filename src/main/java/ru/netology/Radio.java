@@ -18,7 +18,7 @@ public class Radio {
     }
 
     public void changeStationToNext() {
-        if (currentStation < stationNumber) {
+        if (currentStation < stationNumber-1) {
             currentStation = currentStation + 1;
         } else {
             currentStation = 0;
@@ -27,7 +27,7 @@ public class Radio {
 
     public void changeStationToPrev() {
         if (currentStation == minStation) {
-            currentStation = stationNumber;
+            currentStation = stationNumber-1;
         } else {
             currentStation = currentStation - 1;
         }

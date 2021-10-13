@@ -18,7 +18,7 @@ class RadioTest {
     @Test
     void shouldChangeStationToNextMax() {
         Radio station = new Radio(200);
-        station.setCurrentStation(200);
+        station.setCurrentStation(199);
         station.changeStationToNext();
         int expected = 0;
         int actual = station.getCurrentStation();
@@ -39,9 +39,9 @@ class RadioTest {
     @Test
     void shouldChangeStationToPrevMax() {
         Radio station = new Radio(200);
-        station.setCurrentStation(200);
+        station.setCurrentStation(199);
         station.changeStationToPrev();
-        int expected = 199;
+        int expected = 198;
         int actual = station.getCurrentStation();
         assertEquals(expected, actual);
     }
@@ -51,7 +51,7 @@ class RadioTest {
         Radio station = new Radio(200);
         station.setCurrentStation(0);
         station.changeStationToPrev();
-        int expected = 200;
+        int expected = 199;
         int actual = station.getCurrentStation();
         assertEquals(expected, actual);
     }
